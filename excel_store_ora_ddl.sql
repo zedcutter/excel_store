@@ -1,0 +1,31 @@
+create table excel_store (
+filename varchar2(200), --sima VARCHAR MYSQL-ben
+sheet varchar2(200),
+rn integer,
+a	varchar2(2000), --TEXT típus kell MYSQL-ben
+b	varchar2(2000),
+c	varchar2(2000),
+d	varchar2(2000),
+e	varchar2(2000),
+f	varchar2(2000),
+g	varchar2(2000),
+h	varchar2(2000),
+i	varchar2(2000),
+j	varchar2(2000),
+k	varchar2(2000),
+l	varchar2(2000),
+m	varchar2(2000),
+n	varchar2(2000),
+o	varchar2(2000),
+p	varchar2(2000),
+q	varchar2(2000),
+r	varchar2(2000),
+s	varchar2(2000),
+t	varchar2(2000),
+u	varchar2(2000),
+v	varchar2(2000),
+w	varchar2(2000),
+x	varchar2(2000),
+y	varchar2(2000),
+z	varchar2(2000)
+);
