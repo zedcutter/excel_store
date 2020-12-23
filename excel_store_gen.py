@@ -54,9 +54,6 @@ def clean_cellval(p_val):
 
 	
 #----MAIN STARTS -----#
-#print('Ádám & Éva, - valamint: 1 maréknyi $$$ @{}#><|Ä|Ä[đ[đ[Đ[°%')
-#print(clean_str('Ádám & Éva, - valamint: 1 maréknyi $$$ @{}#><|Ä|Ä[đ[đ[Đ[°%'))
-#quit()
 
 #Check input params
 param_cnt=len(sys.argv)-1
