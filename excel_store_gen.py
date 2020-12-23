@@ -30,10 +30,33 @@ from openpyxl.utils import get_column_letter
 
 #String cleaners
 def clean_str(p_str):
-    return p_str.replace(' ','_').replace('.','_').replace('-','_').replace('/','_').replace('@','_').replace(':','_').replace('$','_').replace('&','_')
+	fromchrs=' .-/\@&():$"+áíűőüöúóéÁÍŰŐÜÖÚÓÉ,#|'
+	tochrs=  '_____0___iS__aiuououoeAIUOUOUOE_tI'
+	enabledchars='_0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+	
+	v_str=p_str
+	for v1 in range(0,len(p_str)):
+		for v2 in range(0,len(fromchrs)):
+			#print(v_str[v1])
+			#print(fromchrs[v2])
+			#print('---')
+			if v_str[v1]==fromchrs[v2]:
+				v_str = v_str[:v1] + tochrs[v2] + v_str[v1+1:]
+
+		if enabledchars.find(v_str[v1])==-1:
+			v_str = v_str[:v1] + '_' + v_str[v1+1:]
+
+	return v_str
 
 def clean_cellval(p_val):
+    
     return p_val.replace("'","''").replace(';','\;\ ').replace('-','\-').replace('$','\$').replace('|','\|').replace('"','\"').replace('&',' and ')
+
+	
+#----MAIN STARTS -----#
+#print('Ádám & Éva, - valamint: 1 maréknyi $$$ @{}#><|Ä|Ä[đ[đ[Đ[°%')
+#print(clean_str('Ádám & Éva, - valamint: 1 maréknyi $$$ @{}#><|Ä|Ä[đ[đ[Đ[°%'))
+#quit()
 
 #Check input params
 param_cnt=len(sys.argv)-1
